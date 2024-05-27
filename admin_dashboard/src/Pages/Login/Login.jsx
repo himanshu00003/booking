@@ -29,7 +29,7 @@ const index = () => {
 
         try {
             const res = await axios.post(
-                'https://rooms-backend.onrender.com/api/user/login',
+                'https://backend-vr9r.onrender.com/user/login',
                 inpVal
             );
 

@@ -21,7 +21,7 @@ function Detail() {
     useEffect(() => {
         setLoading(true);
         const fetchData = async () => {
-            const data = await axios.get(`https://rooms-backend.onrender.com/api/user/${path}`);
+            const data = await axios.get(`https://backend-vr9r.onrender.com/user/${path}`);
             setUserData(data.data.message);
         };
         fetchData();

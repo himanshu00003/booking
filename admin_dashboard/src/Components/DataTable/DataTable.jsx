@@ -17,7 +17,7 @@ function DataTable() {
 data. */
     useEffect(() => {
         const dataCall = async () => {
-            const res = await axios.get(`https://rooms-backend.onrender.com/api/${path}`);
+            const res = await axios.get(`https://backend-vr9r.onrender.com/${path}`);
             setData(res.data.message.slice(1));
         };
         dataCall();
@@ -29,7 +29,7 @@ data. */
      */
     const handleDlt = async (id) => {
         try {
-            axios.delete(`https://rooms-backend.onrender.com/api/${path}/${id}`);
+            axios.delete(`https://backend-vr9r.onrender.com/${path}/${id}`);
             setData(data.filter((item) => item.id !== id));
         } catch (error) {
             console.log(error);
