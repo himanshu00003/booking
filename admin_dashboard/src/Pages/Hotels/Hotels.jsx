@@ -82,7 +82,7 @@ function Hotels({ type }) {
    effect is triggered when the `data` state variable changes. */
     useEffect(() => {
         const datass = async () => {
-            const res = await axios.get('https://backend-vr9r.onrender.com/hotels');
+            const res = await axios.get('https://backend-vr9r.onrender.com/api/hotels');
             setData(res.data.message);
         };
         datass();
@@ -94,7 +94,7 @@ function Hotels({ type }) {
      */
     const handleDlt = (id) => {
         try {
-            axios.delete(`https://backend-vr9r.onrender.com/${path}/${id}`);
+            axios.delete(`https://backend-vr9r.onrender.com/api/${path}/${id}`);
             setData(data.filter((item) => item.id !== id));
             console.log(`deleted user ${id}`);
         } catch (error) {

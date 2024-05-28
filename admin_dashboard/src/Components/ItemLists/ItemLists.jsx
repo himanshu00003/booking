@@ -19,9 +19,9 @@ function ItemLists({ type }) {
    is used to fetch data from three different API endpoints with the response data. */
     useEffect(() => {
         const datass = async () => {
-            const res = await axios.get('https://backend-vr9r.onrender.com/hotels');
-            const res2 = await axios.get('https://backend-vr9r.onrender.com/blogs');
-            const res3 = await axios.get('https://backend-vr9r.onrender.com/users');
+            const res = await axios.get('https://backend-vr9r.onrender.com/api/hotels');
+            const res2 = await axios.get('https://backend-vr9r.onrender.com/api/blogs');
+            const res3 = await axios.get('https://backend-vr9r.onrender.com/api/users');
             setHotelData(res.data.message);
             setBlogData(res2.data.message);
             setUserData(res3.data.message);

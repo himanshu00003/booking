@@ -70,7 +70,7 @@ function Blogs({ type }) {
    data. */
     useEffect(() => {
         const getData = async () => {
-            const datas = await axios.get('https://backend-vr9r.onrender.com/blogs');
+            const datas = await axios.get('https://backend-vr9r.onrender.com/api/blogs');
             setData(datas.data.message);
         };
         getData();
@@ -82,7 +82,7 @@ function Blogs({ type }) {
      */
     const handleDlt = (id) => {
         try {
-            axios.delete(`https://backend-vr9r.onrender.com/${path}/${id}`);
+            axios.delete(`https://backend-vr9r.onrender.com/api/${path}/${id}`);
             setData(data.filter((item) => item.id !== id));
             console.log(`deleted user ${id}`);
         } catch (error) {

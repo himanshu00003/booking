@@ -79,7 +79,7 @@ function AddNew({ inputs, title, type }) {
             }
 
             await axios.post(
-                `https://backend-vr9r.onrender.com/${
+                `https://backend-vr9r.onrender.com/api/${
                     type === 'USER' ? 'user/signup' : 'blog/create'
                 }`,
                 userInp
