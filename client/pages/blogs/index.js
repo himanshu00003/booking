@@ -118,7 +118,7 @@ export default index;
 //  returns an object with a "props" property. The "props" property contains a "blogs" property, which
 //  is assigned the value of the "data" variable.
 export async function getStaticProps() {
-    const res = await axios.get('https://rooms-backend.onrender.com/api/blogs');
+    const res = await axios.get('https://backend-vr9r.onrender.com/api/blogs');
     const data = await res.data.message;
 
     return {

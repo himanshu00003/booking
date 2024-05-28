@@ -76,7 +76,7 @@ const index = () => {
 
         try {
             const res = await axios.post(
-                'https://rooms-backend.onrender.com/api/user/login',
+                'https://backend-vr9r.onrender.com/api/user/login',
                 inpval
             );
             dispatch({ type: 'LOGIN_SUCCESS', payload: res.data.message.details });
